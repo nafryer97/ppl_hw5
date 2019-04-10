@@ -43,7 +43,7 @@
             list1
             (if (null? list1)
                 (cons (- 0 (car list2))
-                      (l_sub '(0) (cdr list2)))
+                      (l_sub '() (cdr list2)))
                 (cons (- (car list1) (car list2))
                        (l_sub (cdr list1) (cdr list2)))))))
 
@@ -57,3 +57,26 @@
             poly1
             (cons (poly_check (l_sub (car poly1) (car poly2)))
                   (poly_sub (cdr poly1) (cdr poly2)))))))
+
+; Helper function that calculates the product of two lists
+
+(define l_mul
+  (lambda (list1 list2)
+    (if (null? list1)
+        '()
+        (if (null? list2)
+            '()
+            
+
+
+; Function to calculate the product of two bivariate polynomials
+
+#|(define poly_mul
+  (lambda (poly1 poly2)
+|#    
+
+; Function to Calculate the partial derivative with respect to x of a bivariate polynomial
+
+#| (define poly_derx
+  (lambda (poly)
+    )) |#

@@ -41,8 +41,11 @@
   (lambda (list1 list2)
         (if (null? list2)
             list1
-            (cons (- (car list1) (car list2))
-                  (l_sub (cdr list1) (cdr list2))))))
+            (if (null? list1)
+                (cons (- 0 (car list2))
+                      (l_sub '(0) (cdr list2)))
+                (cons (- (car list1) (car list2))
+                       (l_sub (cdr list1) (cdr list2)))))))
 
 ; Uses the above helper functions to calculate the difference of two bivariate polynomials
 
